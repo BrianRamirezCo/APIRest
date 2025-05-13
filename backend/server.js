@@ -7,7 +7,6 @@ import router from "./routes/routes.js";
 
 connectDB();
 const app = express();
-const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
 app.use(cookieParser());
@@ -19,6 +18,7 @@ app.get("/", (req, res) => {
 
 app.use("/api", router);
 
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log("Server running at PORT:" + PORT);
 });
