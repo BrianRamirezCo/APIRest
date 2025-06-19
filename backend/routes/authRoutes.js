@@ -23,7 +23,7 @@ authRoutes.post("/sendotp", userAuth, sendVerifyOtp);
 
 authRoutes.post("/verify-account", userAuth, verifyEmail);
 
-authRoutes.post("/is-auth", userAuth, isAuthenticated);
+authRoutes.get("/is-auth", userAuth, isAuthenticated);
 
 authRoutes.post("/send-reset-otp", sendResetOtp);
 
